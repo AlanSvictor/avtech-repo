@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/avtech?currentSchema=register
+    username: avtech
+    password: avtech
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    flyway:
+      enabled: true
+      schemas: register
+      baseline-on-migrate: true
+      baseline-version: "1_001"
+      ignore-future-migrations: false
