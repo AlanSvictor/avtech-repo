@@ -20,3 +20,12 @@ spring:
       baseline-on-migrate: true
       baseline-version: "1_001"
       ignore-future-migrations: false
+
+logging:
+  level:
+    org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
+    com.mintbeans.chat.service:
+      MessagePublisher: INFO
+      MessageSubscriber: INFO
+    org:
+      springframework.security: ${SPRING_SECURITY:DEBUG}
